@@ -1,0 +1,196 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.jmolecules</groupId>
+	<artifactId>jmolecules-bom</artifactId>
+	<version>2021.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>jMolecules BOM</name>
+	<description>Bill of materials for jMolecules</description>
+	<url>https://github.com/xmolecules/jmolecules-bom</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>odrotbohm</id>
+			<name>Oliver Drotbohm</name>
+			<email>odrotbohm@vmware.com</email>
+			<organization>VMware Inc.</organization>
+			<organizationUrl>https://vmware.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<profiles>
+		<profile>
+			<id>sonatype</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<distributionManagement>
+				<repository>
+					<id>sonatype</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- API -->
+
+			<dependency>
+				<groupId>org.jmolecules</groupId>
+				<artifactId>jmolecules-cqrs-architecture</artifactId>
+				<version>1.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules</groupId>
+				<artifactId>jmolecules-layered-architecture</artifactId>
+				<version>1.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules</groupId>
+				<artifactId>jmolecules-onion-architecture</artifactId>
+				<version>1.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules</groupId>
+				<artifactId>jmolecules-ddd</artifactId>
+				<version>1.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules</groupId>
+				<artifactId>jmolecules-events</artifactId>
+				<version>1.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<!-- Integrations -->
+
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-archunit</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-bytebuddy</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-jackson</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-jpa</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-spring</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+
+		<defaultGoal>verify</defaultGoal>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.2.7</version>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+						<configuration>
+							<updatePomFile>true</updatePomFile>
+							<flattenMode>bom</flattenMode>
+							<pomElements>
+								<distributionManagement>remove</distributionManagement>
+								<properties>remove</properties>
+								<repositories>remove</repositories>
+								<profiles>remove</profiles>
+							</pomElements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>flatten-clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<releaseProfiles>sonatype</releaseProfiles>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<pushChanges>false</pushChanges>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+					<localCheckout>true</localCheckout>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+	<scm>
+		<url>https://github.com/xmolecules/jmolecules-bom</url>
+		<connection>scm:git:https://github.com/xmolecules/jmolecules-bom</connection>
+		<developerConnection>scm:git:ssh://git@github.com/xmolecules/jmolecules-bom.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+</project>
