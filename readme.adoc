@@ -1,0 +1,38 @@
+= jMolecules BOM
+
+A simple BOM to ease the consumption of jMolecules JARs.
+
+== Usage
+
+[source, xml]
+----
+<dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.jmolecules</groupId>
+			<artifactId>jmolecules-bom</artifactId>
+			<version>2021.0.1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	</dependencies>
+</dependencyManagement>
+----
+
+NOTE: Unfortunately versions defined via a BOM are not considered when declaring Maven Plugin dependency versions.
+I.e. if you e.g. use the ByteBuddy integration, you will still need to declare the version explicitly.
+
+== Version scheme
+
+jMolecules BOM uses https://calver.org/[CalVer] with the following segment semantics:
+
+* 202x -- the year of the release. Thus, will -- tautologically -- increase every year.
+* minor digit -- a spec level. I.e. If the version of the jMolecules API JARs is increased in the release, we will bump that segment.
+* bugfix digit -- the integrations level. Will be bumped if an integration release is included.
+Will be reset for every release including a spec bump.
+
+Example
+* 2021.0.0 contained jMolecules 1.2 and jMolecules Integrations 0.2
+* 2021.0.1 contained jMolecules 1.2 and jMolecules Integrations 0.3
+
+A new release of the API JARs in 2021 will cause a BOM of 2021.1.0 to be released etc.
