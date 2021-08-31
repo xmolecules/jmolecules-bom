@@ -11,7 +11,7 @@ A simple BOM to ease the consumption of jMolecules JARs.
 		<dependency>
 			<groupId>org.jmolecules</groupId>
 			<artifactId>jmolecules-bom</artifactId>
-			<version>2021.0.1</version>
+			<version>2021.1.0</version>
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
@@ -31,7 +31,8 @@ jMolecules BOM uses https://calver.org/[CalVer] with the following segment seman
 * bugfix digit -- the integrations level. Will be bumped if an integration release is included.
 Will be reset for every release including a spec bump.
 
-Example
+=== Example
+
 * 2021.0.0 contained jMolecules 1.2 and jMolecules Integrations 0.2
 * 2021.0.1 contained jMolecules 1.2 and jMolecules Integrations 0.3
 
