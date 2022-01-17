@@ -102,31 +102,31 @@
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-archunit</artifactId>
-				<version>0.7.0</version>
+				<version>0.8.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-bytebuddy</artifactId>
-				<version>0.7.0</version>
+				<version>0.8.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-jackson</artifactId>
-				<version>0.7.0</version>
+				<version>0.8.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-jpa</artifactId>
-				<version>0.7.0</version>
+				<version>0.8.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-spring</artifactId>
-				<version>0.7.0</version>
+				<version>0.8.0</version>
 			</dependency>
 
 		</dependencies>
