@@ -70,37 +70,37 @@
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>jmolecules-cqrs-architecture</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>jmolecules-layered-architecture</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>jmolecules-onion-architecture</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>jmolecules-ddd</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>kmolecules-ddd</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules</groupId>
 				<artifactId>jmolecules-events</artifactId>
-				<version>1.5.0-SNAPSHOT</version>
+				<version>1.5.0</version>
 			</dependency>
 
 			<!-- Integrations -->
