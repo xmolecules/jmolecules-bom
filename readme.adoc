@@ -11,7 +11,7 @@ A simple BOM to ease the consumption of jMolecules JARs, especially API and Inte
     <dependency>
       <groupId>org.jmolecules</groupId>
       <artifactId>jmolecules-bom</artifactId>
-      <version>2022.2.2</version>
+      <version>2022.2.3</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
