@@ -4,7 +4,7 @@
 
 	<groupId>org.jmolecules</groupId>
 	<artifactId>jmolecules-bom</artifactId>
-	<version>2022.3.0</version>
+	<version>2022.3.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>jMolecules BOM</name>
@@ -114,55 +114,55 @@
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-archunit</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-bytebuddy</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-bytebuddy-nodep</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-ddd-integration</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-jackson</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-jpa</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-spring</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-starter-ddd</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jmolecules.integrations</groupId>
 				<artifactId>jmolecules-starter-test</artifactId>
-				<version>0.15.0</version>
+				<version>0.16.0-SNAPSHOT</version>
 			</dependency>
 
 		</dependencies>
@@ -227,7 +227,17 @@
 		<url>https://github.com/xmolecules/jmolecules-bom</url>
 		<connection>scm:git:https://github.com/xmolecules/jmolecules-bom</connection>
 		<developerConnection>scm:git:ssh://git@github.com/xmolecules/jmolecules-bom.git</developerConnection>
-		<tag>2022.3.0</tag>
+		<tag>2022.3.x</tag>
 	</scm>
+
+		<repositories>
+		<repository>
+			<id>spring-snapshot</id>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
 
 </project>
