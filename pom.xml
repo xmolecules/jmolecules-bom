@@ -230,7 +230,14 @@
 		<tag>HEAD</tag>
 	</scm>
 
-		<repositories>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
 		<repository>
 			<id>spring-snapshot</id>
 			<url>https://repo.spring.io/snapshot</url>
