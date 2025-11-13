@@ -11,7 +11,7 @@ A simple BOM to ease the consumption of jMolecules JARs, especially API and Inte
     <dependency>
       <groupId>org.jmolecules</groupId>
       <artifactId>jmolecules-bom</artifactId>
-      <version>2023.3.4</version>
+      <version>2025.0.0</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -27,8 +27,9 @@ I.e. if you e.g. use the ByteBuddy integration, you will still need to declare t
 [options="header"]
 |===
 |BOM Version|jMolecules|jMolecules Integrations
-|2025.0.0-SNAPSHOT|2.0.0-SNAPSHOT|0.30.0-SNAPSHOT
-|*2025.0.0-RC5*|*2.0.0-RC2*|*0.30.0*
+|2025.1.0-SNAPSHOT|2.1.0-SNAPSHOT|0.32.0-SNAPSHOT
+|*2025.0.0*|*2.0.0*|*0.31.0*
+|2025.0.0-RC5|2.0.0-RC2|0.30.0
 |2025.0.0-RC4|2.0.0-RC1|0.28.0
 |2025.0.0-RC3|2.0.0-RC1|0.25.0
 |2025.0.0-RC2|2.0.0-RC1|0.24.1
