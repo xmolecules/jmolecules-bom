@@ -4,7 +4,7 @@
 
 	<groupId>org.jmolecules</groupId>
 	<artifactId>jmolecules-bom</artifactId>
-	<version>2025.0.0-SNAPSHOT</version>
+	<version>2025.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>jMolecules BOM</name>
@@ -257,7 +257,7 @@
 		<url>https://github.com/xmolecules/jmolecules-bom</url>
 		<connection>scm:git:https://github.com/xmolecules/jmolecules-bom</connection>
 		<developerConnection>scm:git:ssh://git@github.com/xmolecules/jmolecules-bom.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>2025.0.0</tag>
 	</scm>
 
 	<distributionManagement>
