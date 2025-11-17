@@ -2,7 +2,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main, "2023.*", "feature/*" ]
+    branches: [ main, "2025.*", "2023.*", "feature/*" ]
 
 jobs:
   build:
