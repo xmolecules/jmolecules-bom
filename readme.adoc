@@ -29,7 +29,7 @@ I.e. if you e.g. use the ByteBuddy integration, you will still need to declare t
 |BOM Version|jMolecules|jMolecules Integrations
 |2025.1.0-SNAPSHOT|2.1.0-SNAPSHOT|0.34.0-SNAPSHOT
 |2025.0.3-SNAPSHOT|2.0.2|0.34.0-SNAPSHOT
-|*2025.0.2*|*2.0.2*|*0.33.0*
+|*2025.0.2*|*2.0.1*|*0.33.0*
 |2025.0.1|2.0.1|0.32.0
 |2025.0.0|2.0.0|0.31.0
 |2025.0.0-RC5|2.0.0-RC2|0.30.0
