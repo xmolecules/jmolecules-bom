@@ -40,7 +40,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.2.7</version>
+						<version>3.2.8</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -54,7 +54,7 @@
 					<plugin>
 						<groupId>org.sonatype.central</groupId>
 						<artifactId>central-publishing-maven-plugin</artifactId>
-						<version>0.8.0</version>
+						<version>0.12.0</version>
 						<extensions>true</extensions>
 						<configuration>
 							<deploymentName>jMolecules BOM ${project.version}</deploymentName>
@@ -206,7 +206,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.7.0</version>
+				<version>1.10.0</version>
 				<executions>
 					<execution>
 						<id>flatten</id>
@@ -238,7 +238,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>3.1.1</version>
+				<version>3.3.1</version>
 				<configuration>
 					<releaseProfiles>sonatype</releaseProfiles>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
